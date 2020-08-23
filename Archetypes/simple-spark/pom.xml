@@ -13,8 +13,6 @@
         <scala.version>2.11</scala.version>
         <scala.version.minor>12</scala.version.minor>
         <spark.version>2.4.0</spark.version>
-        <scalatest.version>3.2.0</scalatest.version>
-        <maven-scala-plugin.version>2.11</maven-scala-plugin.version>
         <main.class>spark.SparkApp</main.class>
     </properties>
 

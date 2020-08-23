@@ -1,9 +1,7 @@
 package spark
 
-
 import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.sql.functions._
 
 object SparkApp {
 
@@ -18,7 +16,7 @@ object SparkApp {
 
     def createRDD(): RDD[(Int,String)] = {
       val rdd = sc.parallelize(Seq((1, "Spark"), (2, "Scala"), (3, "Big Data")))
-      return rdd
+      rdd
     }
 
     val aRDD = createRDD()

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a66e1698-df7f-40c3-b9cc-0f362fcadc6b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../simple-spark-build-jar/simple-spark-build-jar.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/spark/SparkApp.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/spark/SparkApp.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/spark/SparkAppTest.scala" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1gW6FiW54SmhJOCwulmO4xJ0Miq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration name="SparkApp" type="Application" factoryName="Application" temporary="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="spark.SparkApp" />
+      <module name="simple-spark" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spark.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SparkApp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a66e1698-df7f-40c3-b9cc-0f362fcadc6b" name="Default Changelist" comment="" />
+      <created>1598217901169</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598217901169</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="976" y="451" width="2024" height="1214" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598218056524">
+      <screen x="80" y="60" width="2920" height="1940" />
+    </state>
+    <state x="976" y="451" width="2024" height="1214" key="#com.intellij.execution.impl.EditConfigurationsDialog/80.60.2920.1940@80.60.2920.1940" timestamp="1598218056524" />
+    <state x="937" y="851" width="1195" height="347" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog" timestamp="1598218149391">
+      <screen x="80" y="60" width="2920" height="1940" />
+    </state>
+    <state x="937" y="851" width="1195" height="347" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog/80.60.2920.1940@80.60.2920.1940" timestamp="1598218149391" />
+    <state width="2824" height="492" key="GridCell.Tab.0.bottom" timestamp="1598218388726">
+      <screen x="80" y="60" width="2920" height="1940" />
+    </state>
+    <state width="2824" height="492" key="GridCell.Tab.0.bottom/80.60.2920.1940@80.60.2920.1940" timestamp="1598218388726" />
+    <state width="2824" height="492" key="GridCell.Tab.0.center" timestamp="1598218388725">
+      <screen x="80" y="60" width="2920" height="1940" />
+    </state>
+    <state width="2824" height="492" key="GridCell.Tab.0.center/80.60.2920.1940@80.60.2920.1940" timestamp="1598218388725" />
+    <state width="2824" height="492" key="GridCell.Tab.0.left" timestamp="1598218388724">
+      <screen x="80" y="60" width="2920" height="1940" />
+    </state>
+    <state width="2824" height="492" key="GridCell.Tab.0.left/80.60.2920.1940@80.60.2920.1940" timestamp="1598218388724" />
+    <state width="2824" height="492" key="GridCell.Tab.0.right" timestamp="1598218388725">
+      <screen x="80" y="60" width="2920" height="1940" />
+    </state>
+    <state width="2824" height="492" key="GridCell.Tab.0.right/80.60.2920.1940@80.60.2920.1940" timestamp="1598218388725" />
+  </component>
+</project>
