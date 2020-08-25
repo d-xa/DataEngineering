@@ -10,10 +10,13 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <main.class>spark.SparkApp</main.class>
         <scala.version>2.11.12</scala.version>
+        <scala.major.version>2.11</scala.major.version>
         <spark.version>2.4.0</spark.version>
         <scala.maven.plugin.version>4.4.0</scala.maven.plugin.version>
-        <main.class>spark.SparkApp</main.class>
+        <scalatest.version>3.1.0</scalatest.version>
+        <scalactic.version>3.1.0</scalactic.version>
     </properties>
 
 
@@ -36,13 +39,13 @@
         <!-- Scala-Test -->
         <dependency>
             <groupId>org.scalactic</groupId>
-            <artifactId>scalactic_2.11</artifactId>
-            <version>3.1.0</version>
+            <artifactId>scalactic_${scala.major.version}</artifactId>
+            <version>${scalactic.version}</version>
         </dependency>
         <dependency>
             <groupId>org.scalatest</groupId>
-            <artifactId>scalatest_2.11</artifactId>
-            <version>3.1.0</version>
+            <artifactId>scalatest_${scala.major.version}</artifactId>
+            <version>${scalatest.version}</version>
             <scope>test</scope>
         </dependency>
 
@@ -50,13 +53,13 @@
         <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core -->
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-core_2.11</artifactId>
+            <artifactId>spark-core_${scala.major.version}</artifactId>
             <version>${spark.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql -->
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-sql_2.11</artifactId>
+            <artifactId>spark-sql_${scala.major.version}</artifactId>
             <version>${spark.version}</version>
         </dependency>
     </dependencies>
