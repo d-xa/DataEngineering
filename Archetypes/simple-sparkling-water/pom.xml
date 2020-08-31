@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.dxa.archetypes</groupId>
+    <artifactId>simple-sparkling-water</artifactId>
+    <version>0.0.1</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <scala.version>2.11.12</scala.version>
+        <scala.major.version>2.11</scala.major.version>
+        <spark.version>2.4.0</spark.version>
+        <scala.maven.plugin.version>4.4.0</scala.maven.plugin.version>
+        <scalatest.version>3.1.0</scalatest.version>
+        <scalactic.version>3.1.0</scalactic.version>
+        <h2o.version>3.30.1.1-1-2.4</h2o.version>
+        <h2o.major.version>3.30.1.1</h2o.major.version>
+    </properties>
+
+
+    <dependencies>
+        <!-- Scala -->
+        <!-- https://mvnrepository.com/artifact/org.scala-lang/scala-library -->
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>${scala.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.scala-lang/scala-reflect -->
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-reflect</artifactId>
+            <version>${scala.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.scala-lang.modules/scala-xml -->
+        <dependency>
+            <groupId>org.scala-lang.modules</groupId>
+            <artifactId>scala-xml_${scala.major.version}</artifactId>
+            <version>1.2.0</version>
+        </dependency>
+        <!-- to solve h2o sparkling water issue -->
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-compiler</artifactId>
+            <version>${scala.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-repl -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-repl_${scala.major.version}</artifactId>
+            <version>${spark.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Scala-Test -->
+        <dependency>
+            <groupId>org.scalactic</groupId>
+            <artifactId>scalactic_${scala.major.version}</artifactId>
+            <version>${scalactic.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.scalatest/scalatest -->
+        <dependency>
+            <groupId>org.scalatest</groupId>
+            <artifactId>scalatest_${scala.major.version}</artifactId>
+            <version>${scalatest.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Spark -->
+        <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_${scala.major.version}</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_${scala.major.version}</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-mllib -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-mllib_${scala.major.version}</artifactId>
+            <version>${spark.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- h2o / Sparkling water -->
+        <dependency>
+            <groupId>ai.h2o</groupId>
+            <artifactId>sparkling-water-core_${scala.major.version}</artifactId>
+            <version>${h2o.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ai.h2o</groupId>
+            <artifactId>sparkling-water-repl_${scala.major.version}</artifactId>
+            <version>${h2o.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ai.h2o</groupId>
+            <artifactId>sparkling-water-ml_${scala.major.version}</artifactId>
+            <version>${h2o.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ai.h2o</groupId>
+            <artifactId>h2o-core</artifactId>
+            <version>${h2o.major.version}</version>
+        </dependency>
+
+    </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <!-- plugin for compiling/testing/running/documenting scala code in maven -->
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+                <version>${scala.maven.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>add-source</goal>
+                            <goal>compile</goal>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Scalatest Maven plugin -->
+            <!-- disable surefire -->
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-surefire-plugin</artifactId>
+              <version>2.7</version>
+              <configuration>
+                <skipTests>true</skipTests>
+              </configuration>
+            </plugin>
+            <!-- enable scalatest -->
+            <plugin>
+              <groupId>org.scalatest</groupId>
+              <artifactId>scalatest-maven-plugin</artifactId>
+              <version>1.0</version>
+              <configuration>
+                <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+                <junitxml>.</junitxml>
+                <filereports>WDF TestSuite.txt</filereports>
+              </configuration>
+              <executions>
+                <execution>
+                  <id>test</id>
+                  <goals>
+                    <goal>test</goal>
+                  </goals>
+                </execution>
+              </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
